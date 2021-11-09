@@ -1,0 +1,8 @@
+{
+  "name": "Burn",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react",
+  "id": "cc1cec6f"
+}
