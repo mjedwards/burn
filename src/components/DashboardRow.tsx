@@ -1,36 +1,12 @@
 import React from "react";
 import { IonList, IonItem, IonLabel } from "@ionic/react";
-// import { nutrition } from "ionicons/icons";
+import { TypeFoodLog } from "../globals/interfaces";
 
-// {
-//     title: '',
-//     itemName: '',
-//     calories: number,
-//     nutritionFacts: [
-//         {
-//             name: '',
-//             howMuch: '',
-//             metric: '',
-//             percentage: '',
-//         },
-//         {},
-//         {},
-//         {},
-//     ],
-//     brand: '',
-// }
-interface ItemInterface {
-    id: number;
-    title: string;
-    itemName: string;
-    calories: string;
-  }
 interface ContainerProps {
-  item: ItemInterface;
+  item: TypeFoodLog;
 }
 
 const DashboardRow: React.FC<ContainerProps> = ({ item }) => {
-  console.log(item);
   return (
     <IonList>
       <IonItem>
