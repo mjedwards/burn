@@ -6,21 +6,22 @@ import {
   IonContent,
   IonLabel,
   IonListHeader,
-  IonProgressBar,
 } from "@ionic/react";
 import DashboardRow from "./DashboardRow";
 import { TypeFoodLog } from "../globals/interfaces";
+import AnimatedProgressbar from "./animatedProgressbar";
+
 
 type ContainerProps = {
   food: Array<Record<symbol, TypeFoodLog>>;
 }
 
-const DashContainer: React.FC<ContainerProps> = ({ food }) => (
-  // const caloricGoal = 2000;
-  // let caloricProgress = 
+const DashContainer: React.FC<ContainerProps> = ({ food }) => {
+  
+  return (
   <IonContent>
     <IonLabel>Caloric Progress</IonLabel>
-    <IonProgressBar color="primary" value={0.5}></IonProgressBar>
+    <AnimatedProgressbar />
     <IonGrid>
       <IonRow>
         <IonCol>
@@ -54,6 +55,7 @@ const DashContainer: React.FC<ContainerProps> = ({ food }) => (
       </IonRow>
     </IonGrid>
   </IonContent>
-);
+  )
+};
 
 export default DashContainer;

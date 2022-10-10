@@ -14,9 +14,8 @@ const items: TypeFoodLog[] = [
   { id: 1, title: 'Breakfast', itemName: 'bacon and eggs with cheese on a bagel', calories:'400 kCal', },
   { id: 2, title: 'breakfast', itemName: 'cinnamon sugar oatmeal', calories:'250 kCal', },
 ];
-
+// we will fetch data here and pass it down to the respective components, we will get the food log data for the user and pass it to the Dash container
 const Dashboard: React.FC = () => {
-  console.log(items)
   return (
     <IonPage>
       <IonHeader>
