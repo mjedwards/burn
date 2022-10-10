@@ -9,12 +9,15 @@ import {
   IonProgressBar,
 } from "@ionic/react";
 import DashboardRow from "./DashboardRow";
+import { TypeFoodLog } from "../globals/interfaces";
 
-interface ContainerProps {
-  food: object[];
+type ContainerProps = {
+  food: Array<Record<symbol, TypeFoodLog>>;
 }
 
 const DashContainer: React.FC<ContainerProps> = ({ food }) => (
+  // const caloricGoal = 2000;
+  // let caloricProgress = 
   <IonContent>
     <IonLabel>Caloric Progress</IonLabel>
     <IonProgressBar color="primary" value={0.5}></IonProgressBar>
@@ -24,8 +27,8 @@ const DashContainer: React.FC<ContainerProps> = ({ food }) => (
           <IonListHeader lines="full" color="primary">
             <IonLabel>Breakfast</IonLabel>
           </IonListHeader>
-          {food.map((item) => {
-            return <DashboardRow item={item} />;
+          {food.map((item: any) => {
+            return <DashboardRow key={item.id} item={item} />;
           })}
         </IonCol>
       </IonRow>
@@ -34,8 +37,8 @@ const DashContainer: React.FC<ContainerProps> = ({ food }) => (
           <IonListHeader lines="full" color="primary">
             <IonLabel>Lunch</IonLabel>
           </IonListHeader>
-          {food.map((item) => {
-            return <DashboardRow item={item} />;
+          {food.map((item: any) => {
+            return <DashboardRow key={item.id} item={item} />;
           })}
         </IonCol>
       </IonRow>
@@ -44,8 +47,8 @@ const DashContainer: React.FC<ContainerProps> = ({ food }) => (
           <IonListHeader lines="full" color="primary">
             <IonLabel>Dinner</IonLabel>
           </IonListHeader>
-          {food.map((item) => {
-            return <DashboardRow item={item} />;
+          {food.map((item: any) => {
+            return <DashboardRow key={item.id} item={item} />;
           })}
         </IonCol>
       </IonRow>

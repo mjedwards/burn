@@ -7,18 +7,10 @@ import {
 } from "@ionic/react";
 import React from "react";
 import DashContainer from "../components/DashContainer";
+import { TypeFoodLog } from "../globals/interfaces";
 import "./Dashboard.css";
 
-
-interface FoodItem {
-  id: number;
-  title: string;
-  itemName: string;
-  calories: string;
-  // [key: string]: any; // 👈️ index signature
-}
-
-const items: FoodItem[] = [
+const items: TypeFoodLog[] = [
   { id: 1, title: 'Breakfast', itemName: 'bacon and eggs with cheese on a bagel', calories:'400 kCal', },
   { id: 2, title: 'breakfast', itemName: 'cinnamon sugar oatmeal', calories:'250 kCal', },
 ];
