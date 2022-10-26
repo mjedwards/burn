@@ -6,23 +6,24 @@ import {
     IonToolbar,
   } from "@ionic/react";
   import React from "react";
-import Login from "../components/Login";
+import Register from "../components/Register";
 import { AuthProps } from "../globals/interfaces";
+
   
-const UserLogin: React.FC<AuthProps> = ({setIsUserAuth}) => {
+const UserRegister: React.FC<AuthProps> = ({setIsUserAuth}) => {
     return (
       <IonPage>
         <IonHeader>
           <IonToolbar>
-            <IonTitle>Login</IonTitle>
+            <IonTitle>Register</IonTitle>
           </IonToolbar>
         </IonHeader>
         <IonContent fullscreen>
-            <Login setIsUserAuth={setIsUserAuth}/>
+            <Register setIsUserAuth={setIsUserAuth}/>
         </IonContent>
       </IonPage>
     );
   };
   
-  export default UserLogin;
+  export default UserRegister;
   

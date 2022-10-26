@@ -1,5 +1,5 @@
 // const eventsResolvers = require('./events')
-import userResolvers from './users'
+import {gqlUserAuth} from './users'
 // const tasksResolvers = require('./tasks')
 // const miniTaskResolvers = require('./miniTask')
 
@@ -8,7 +8,7 @@ const queryMutation = {
     Query: {
     },
     Mutation: {
-        ...userResolvers.Mutation,
+        ...gqlUserAuth.Mutation,
     },
 }
 

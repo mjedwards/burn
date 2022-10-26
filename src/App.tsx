@@ -39,6 +39,7 @@ import '@ionic/react/css/display.css';
 /* Theme variables */
 import './theme/variables.css';
 import UserLogin from './pages/UserLogin';
+import UserRegister from './pages/UserRegister';
 
 const App: React.FC = () => {
   const [isOpen, setIsOpen] = React.useState(false);
@@ -52,9 +53,9 @@ const App: React.FC = () => {
             <Route exact path="/login">
               {isUserAuth ? <Redirect to="/dashboard" /> :  <UserLogin setIsUserAuth={setIsUserAuth}/>}
             </Route>
-            {/* <Route exact path="/register">
-              {isUserAuth ? <Redirect to="/dashboard" /> :  <Register setIsUserAuth={setIsUserAuth}/>}
-            </Route> */}
+            <Route exact path="/register">
+              {isUserAuth ? <Redirect to="/dashboard" /> :  <UserRegister setIsUserAuth={setIsUserAuth}/>}
+            </Route>
             <ProtectedRoute isUserAuth={isUserAuth} exact path="/dashboard" component={Dashboard}/>
             <ProtectedRoute isUserAuth={isUserAuth} exact path="/profile" component={Profile}/>
             <ProtectedRoute isUserAuth={isUserAuth} exact path="/community" component={Community}/>

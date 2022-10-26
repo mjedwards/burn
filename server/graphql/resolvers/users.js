@@ -21,7 +21,7 @@ function generateToken(user) {
   );
 }
 
-const gqlUserAuth = {
+export const gqlUserAuth = {
   Mutation: {
     async login(_, { username, password }) {
       const { valid, errors } = validateLoginInput(username, password);
