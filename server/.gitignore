@@ -2,12 +2,8 @@
 
 # dependencies
 /node_modules
-./node_modules
 /.pnp
 .pnp.js
-
-# app configuration
-config.js
 
 # testing
 /coverage
@@ -28,5 +24,7 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+config
+config.ts
 # Optional eslint cache
 .eslintcache
